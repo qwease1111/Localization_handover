@@ -325,7 +325,7 @@ ros2 launch turtlebot3_gazebo turtlebot3_uwb_gps.launch.py
 # 2 - ekf
 ros2 launch robot_localization dual_ekf_navsat_gps_uwb.launch.py
 # 3 - rviz2
-rviz2 -d ~/TIM_Localization/src/turtlebot3_simulations/turtlebot3_gazebo/rviz/tb3_gazebo_robot_localization.rviz
+rviz2 -d ~/Localization_handover/src/turtlebot3_simulations/turtlebot3_gazebo/rviz/tb3_gazebo_robot_localization.rviz
 # 4 - Keyboard control
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # 5 - Visualization
