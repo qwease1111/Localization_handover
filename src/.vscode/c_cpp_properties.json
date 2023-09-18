@@ -1,0 +1,63 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/robot/localization_ws/install/ros2_uwb_localization/include/**",
+        "/home/robot/localization_ws/install/uwb_gazebo_plugin/include/**",
+        "/home/robot/localization_ws/install/turtlebot3_fake_node/include/**",
+        "/home/robot/localization_ws/install/turtlebot3_msgs/include/**",
+        "/home/robot/localization_ws/install/turtlebot3_gazebo/include/**",
+        "/home/robot/localization_ws/install/rosmsgs/include/**",
+        "/home/robot/localization_ws/install/ros2_uwb_simulation/include/**",
+        "/home/robot/localization_ws/install/robot_localization/include/**",
+        "/home/robot/localization_ws/install/dynamixel_sdk_custom_interfaces/include/**",
+        "/home/robot/localization_ws/install/dynamixel_sdk/include/**",
+        "/home/robot/youbot_ws/install/youbot_behavior_tree/include/**",
+        "/home/robot/youbot_ws/install/youbot_msgs/include/**",
+        "/home/robot/youbot_ws/install/webots_ros2_control/include/**",
+        "/home/robot/youbot_ws/install/webots_ros2_driver/include/**",
+        "/home/robot/youbot_ws/install/webots_ros2_msgs/include/**",
+        "/home/robot/youbot_ws/install/teb_local_planner/include/**",
+        "/home/robot/youbot_ws/install/teb_msgs/include/**",
+        "/home/robot/youbot_ws/install/omni_drive_controller/include/**",
+        "/home/robot/youbot_ws/install/csm/include/**",
+        "/home/robot/youbot_ws/install/costmap_converter/include/**",
+        "/home/robot/youbot_ws/install/costmap_converter_msgs/include/**",
+        "/home/robot/youbot_ws/install/cmd_vel_mux/include/**",
+        "/home/robot/youbot_ws/install/cartographer_rviz/include/**",
+        "/home/robot/youbot_ws/install/cartographer_ros/include/**",
+        "/home/robot/youbot_ws/install/cartographer_ros_msgs/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/teb_local_planner/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/teb_msgs/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/robot_behavior_tree/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/robot_msgs/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/costmap_converter/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/costmap_converter_msgs/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/cmd_vel_mux/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/cartographer_rviz/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/cartographer_ros/include/**",
+        "/home/robot/NVIDIA_Issac_Sim/isaac_sim_ws/install/cartographer_ros_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/robot/localization_ws/src/DynamixelSDK/dynamixel_sdk/include/**",
+        "/home/robot/localization_ws/src/DynamixelSDK/dynamixel_sdk_examples/include/**",
+        "/home/robot/localization_ws/src/robot_localization/include/**",
+        "/home/robot/localization_ws/src/turtlebot3/turtlebot3_node/include/**",
+        "/home/robot/localization_ws/src/turtlebot3_simulations/turtlebot3_fake_node/include/**",
+        "/home/robot/localization_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/robot/localization_ws/src/uwb_gazebo/ros2_uwb_localization/include/**",
+        "/home/robot/localization_ws/src/uwb_gazebo/uwb_gazebo_plugin/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

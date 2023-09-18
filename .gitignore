@@ -1,0 +1,5 @@
+# 屏蔽编译后的文件
+build/
+install/
+log/
+

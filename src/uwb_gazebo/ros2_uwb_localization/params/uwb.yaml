@@ -1,0 +1,9 @@
+ros2_uwb_node:
+    ros__parameters:
+        use_sim_time: true
+        debug_enable: false
+        tags_tf2_enable: true
+        anchors_tf2_enable: true
+        odom_topic: "odometry/uwb"
+        uwb_anchors_topic: "/uwb_anchors"
+        uwb_ranging_topic: "/uwb_ranging"
