@@ -27,20 +27,9 @@ As shown in the figure below, the scene is divided into four areas, A, B, C, and
 
 #### 3.2 System Architecture
 
-The main focus of this system architecture is multi-sensor fusion, with particular emphasis on indoor and outdoor UWB and GPS data switching. Here, we write a node that receives UWB and GPS data and integrates this data based on signal strength (in simulation according to the area, and in reality according to actual signal strength). This node then publishes an Odometry/uwb2gps odometer data for EKF to carry out fused localization. It's also essential to consider the data conversion between UWB and GPS relative to the map. More detailed aspects will be explored later in the experimental section.
+The main focus of this system architecture is multi-sensor fusion, with particular emphasis on indoor and outdoor UWB and GPS data switching. Here, we write a node that receives UWB and GPS data and integrates this data based on signal strength (in simulation according to the area, and in reality according to actual signal strength). This node then publishes an Odometry/uwb2gps odometer data for EKF to carry out fused localization. It's also essential to consider the data conversion between UWB and GPS relative to the map. 
 
-
-- Option 1 (Only fusing one dataset)
-
-<img src="素材/02_流程图.jpg" alt="02_流程图" style="zoom:70%;" />
-
-- Option 2 (Fusing two datasets simultaneously, requiring mode switching for localization)
-
-<img src="素材/02_流程图_new.jpg" alt="02_流程图_new" style="zoom:57%;" />
-
-
-
-
+<img width="790" alt="image" src="https://github.com/qwease1111/Localization_handover/assets/97889146/66b10018-2f39-44dd-8c57-1a0826497e10">
 
 ## UWB Localization
 
