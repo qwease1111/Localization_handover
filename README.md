@@ -389,5 +389,4 @@ location_mode: 'outdoor'"
 ```
 
 ![01_uwb_ekf](素材/01_uwb_ekf.gif)
-![Localization-handover](https://github.com/qwease1111/Localization_handover/assets/97889146/e22cba6e-a861-47f0-8452-7020f18d1610)
 ![Localization_Handover](https://github.com/qwease1111/Localization_handover/assets/97889146/b1d05a69-69f9-40f8-89d2-83a2bce5f863)
