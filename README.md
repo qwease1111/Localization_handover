@@ -31,6 +31,22 @@ The main focus of this system architecture is multi-sensor fusion, with particul
 
 <img width="790" alt="image" src="https://github.com/qwease1111/Localization_handover/assets/97889146/66b10018-2f39-44dd-8c57-1a0826497e10">
 
+The entire localization process comprises two distinct steps:
+##### Primary localization 
+  Objective: To position the robot with its center as the origin of the body frame, using the world frame as a reference.
+  How: We use an EKF, integrating data from UWB, GPS, Odometry, and IMU. The Kalman gain relies on the individual noise covariance of each signal, producing a relatively accurate result.
+  Challenge: There's a time gap between consecutive GPS data transmissions, leading to a momentary discontinuity.
+##### Secondary Localization
+  Objective: To address the discontinuity caused by the GPS data gap.
+  How: We now consider the robot's last position as the reference frame's origin and use the base link frame in place of the previous body frame. For the robot's subsequent movement, position is sourced from Odometry and IMU, and then integrated using EKF. This process continues until the next GPS data point is available.
+  Result: By sequentially combining these two transformations, we get a comprehensive location for the given period.
+##### Advantages:
+  The first step, with GPS and UWB, ensures accurate localization.
+  The second step, leveraging Odometry and IMU, addresses the discontinuity caused by GPS signals.
+  When the subsequent GPS/UWB data becomes available, it corrects the cumulative errors introduced by IMU and Odometry.  
+In essence, this two-step approach overcomes the inherent drawbacks of each sensor, ensuring that we consistently obtain accurate and continuous localization data.
+![image](https://github.com/qwease1111/Localization_handover/assets/97889146/21ecd2c5-b8d7-4e09-99b0-c6e2d7bf4273)
+
 ## UWB Localization
 
 - [gazebo plugin ](https://github.com/GiacomoCorradini/uwb_gazebo_plugin) plugin
