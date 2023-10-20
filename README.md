@@ -45,7 +45,7 @@ The entire localization process comprises two distinct steps:
   The second step, leveraging Odometry and IMU, addresses the discontinuity caused by GPS signals.
   When the subsequent GPS/UWB data becomes available, it corrects the cumulative errors introduced by IMU and Odometry.  
 In essence, this two-step approach overcomes the inherent drawbacks of each sensor, ensuring that we consistently obtain accurate and continuous localization data.
-![image](https://github.com/qwease1111/Localization_handover/assets/97889146/21ecd2c5-b8d7-4e09-99b0-c6e2d7bf4273)
+
 
 ## UWB Localization
 
