@@ -218,21 +218,21 @@ float norm(struct point p) // get the norm of a vector 求向量的范数
 
 void trilateration_1(struct point point1, struct point point2, struct point point3, double r1, double r2, double r3) {
 	struct point resultPose;
-	// unit vector in a direction from point1 to point 2  从点1到点2方向上的单位向量
+	// unit vector in a direction from point1 to point 2  
 	double p2p1Distance = pow(pow(point2.x - point1.x, 2) + pow(point2.y - point1.y, 2), 0.5);
 	struct point ex = { (point2.x - point1.x) / p2p1Distance, (point2.y - point1.y) / p2p1Distance };
 	struct point aux = { point3.x - point1.x,point3.y - point1.y };
-	// signed magnitude of the x component  x分量的符号大小
+	// signed magnitude of the x component  
 	double i = ex.x * aux.x + ex.y * aux.y;
-	// the unit vector in the y direction.  y方向的单位向量。T
+	// the unit vector in the y direction.  
 	struct point aux2 = { point3.x - point1.x - i * ex.x, point3.y - point1.y - i * ex.y };
 	struct point ey = { aux2.x / norm(aux2), aux2.y / norm(aux2) };
-	// the signed magnitude of the y component  y分量的符号大小
+	// the signed magnitude of the y component  
 	double j = ey.x * aux.x + ey.y * aux.y;
-	// coordinates  协调
+	// coordinates  
 	double x = (pow(r1, 2) - pow(r2, 2) + pow(p2p1Distance, 2)) / (2 * p2p1Distance);
 	double y = (pow(r1, 2) - pow(r3, 2) + pow(i, 2) + pow(j, 2)) / (2 * j) - i * x / j;
-	// result coordinates   结果坐标
+	// result coordinates   
 	double finalX = point1.x + x * ex.x + y * ey.x;
 	double finalY = point1.y + x * ex.y + y * ey.y;
 	resultPose.x = finalX;
@@ -245,19 +245,19 @@ void trilateration_1(struct point point1, struct point point2, struct point poin
 int main()
 {
 	struct point points[3];
-	// 基站1
+	// Anchor 1
 	points[0].x= 6.8;
 	points[0].y = 6.8;
-	double r1 = 4.954; 	// 基站距离未知点的距离
-	// 基站2
+	double r1 = 4.954; 	// The distance between anchor and tag
+	// Anchor 2
 	points[1].x = 6.8;
 	points[1].y = 0.5;
-	double r2=4.429;	// 基站距离未知点的距离
-	// 基站3
+	double r2=4.429;	
+	// Anchor 3
 	points[2].x = 0.5;
 	points[2].y = 6.8;
-	double r3 = 4.424;	// 基站距离未知点的距离
-	// 计算标签的位置坐标
+	double r3 = 4.424;	
+	// Calculate the coordinate of tag
 	trilateration_1(points[0], points[1], points[2], r1, r2, r3);
 
 	return 0;
